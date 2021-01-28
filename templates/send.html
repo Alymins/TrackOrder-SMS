@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if msg == None %}
+        <title>Error</title>
+    {% else %}
+        <title>SMS Enviado...</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<center>
+    <div class="v-center">
+        {% if msg == None %}
+            <h1>Error</h1>
+            <p>Ocorreu ao buscar o código ou ao enviar a mensagem</p><br><br>
+        {% else %}
+            <h1>Pesquisa feita e sms enviado...</h1>
+            <p>pode ser que o sms demore alguns segundos para chegar.</p><br>
+        {% endif %}
+        <button>Consultar outro rastreio</button>
+    </div>
+</center>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Order - SMS</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<main>
+    <center>
+        <div class="v-center">
+            <h1>Receba o status da sua entrega via sms</h1>
+            <form action="/enviado" method="get" class="track_code">
+                <input type="text" name="code" id="code" placeholder="Insira aqui o codígo de rasteio dos correios"
+                       size="30" required/> <br>
+                <input type="tel" name="phone" id="phone" placeholder="Insira aqui o seu número de celular..."
+                       pattern="\+[0-9]{7,}" title="O número precisa ser no formato +5531xxxxxxxx" size="30"
+                       required><br>
+                <small>O número precisa ser no formato +5531xxxxxxxx</small>
+                <p><input type="checkbox" name="ok" required>Aceito receber o status via sms</p>
+                <button>Solicar Status</button>
+            </form>
+        </div>
+    </center>
+    </main>
+</body>
+</html>

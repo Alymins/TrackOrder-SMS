@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+}
+
+body {
+	background-color: #f06d06;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+
+div {
+	padding: 45px;
+	background-color: rgb(240,240,240); 
+	border-radius: 10px;
+	box-shadow: 3px 3px 0px 1px rgba(210,210,210,0.95)
+}
+
+
+input::placeholder{
+	color: red;
+	opacity: 0.75;
+}
+
+input#code {
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+input#phone {
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+}
