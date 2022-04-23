@@ -1,6 +1,0 @@
-#  requirements.in
-requests
-flask
-twilio
-bs4
-apscheduler

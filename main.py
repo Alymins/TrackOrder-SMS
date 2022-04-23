@@ -4,13 +4,9 @@ from tracks_code_db import save_track_code, send_msg_every_day
 from apscheduler.schedulers.background import BackgroundScheduler
 
 
-def teste():
-    print("test")
-
-
-sched = BackgroundScheduler(daemon=True)
-sched.add_job(send_msg_every_day, 'interval', hours=1)
-sched.start()
+scheduler = BackgroundScheduler(daemon=True)
+scheduler.add_job(send_msg_every_day, 'interval', hours=1)
+scheduler.start()
 
 app = Flask("Track Order - SMS")
 
@@ -33,7 +29,7 @@ def search():
         return redirect(url_for('main'))
     result = search_track_order(code)
     print(result)
-    if "entregue ao desrinatário" not in result['last_status']:
+    if "entregue ao destinatário" not in result['last_status']:
         save_track_code((phone_number, code, result["last_update"]))
     else:
         pass
@@ -41,5 +37,5 @@ def search():
     return render_template("send.html", msg=msg)
 
 
-app.run(host="192.168.0.68")
+app.run()
 send_msg_every_day()

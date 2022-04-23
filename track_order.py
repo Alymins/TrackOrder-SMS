@@ -2,15 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
-from time import sleep
 
 
 # autenticacao twilio
 # pegue suas credenciais: http://twil.io/secure
-account_sid = 'ACa3e0745640b287f1229ff9132124d33e'
-auth_token = 'd6ab5d840239b346cc16aa2e6d3df488'
-account_number = "+16106162702"
-client = Client(account_sid, auth_token)
+ACCOUNT_SID = ''
+AUTH_TOKEN = ''
+ACCOUNT_NUMBER = ""
+client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 
 def search_track_order(code):
@@ -53,7 +52,7 @@ def send_msg(to, result, clt=client):
             message = clt.messages.create(
                 to=to,
                 body=msg,
-                from_=account_number
+                from_=ACCOUNT_NUMBER
             )
             return message
         else:
