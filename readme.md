@@ -9,7 +9,7 @@ TrackOrder SMS é uma web page para rastrear e monitorar encomendas. O sistema i
 ## Funcionalidades
 
 - Coleta dados sobre a encomenda pelo código de rasteio
-- Armazena o código de rastreio e a cada 1 hora verifica se o status da encomenda atualizou, caso ocorra uma atualização envia um SMS e remove o código quando a encomenda é entregue
+- Envia a cada 1 hora uma messagem com status da encomenda caso ocorra uma atualização da encomenda ate que a encomenda seja recebida.
 
 ## Tecnologias Utilizadas
 
